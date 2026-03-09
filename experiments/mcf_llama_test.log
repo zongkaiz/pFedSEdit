@@ -1,0 +1,352 @@
+Results will be stored at results/FedLEKE/run_001
+Executing FedLEKE with parameters NSEHyperParams(model_name='Llama3-8B', layers=[4, 5, 6, 7, 8], layer_selection='all', fact_token='subject_last', v_num_grad_steps=25, v_lr=0.1, v_loss_layer=31, v_weight_decay=0.5, clamp_norm_factor=0.75, kl_factor=0.0625, mom2_adjustment=True, mom2_update_weight=15000, rewrite_module_tmp='model.layers.{}.mlp.down_proj', layer_module_tmp='model.layers.{}', mlp_module_tmp='model.layers.{}.mlp', attn_module_tmp='model.layers.{}.self_attn', ln_f_module='model.norm', lm_head_module='lm_head', mom2_dataset='wikipedia', mom2_n_samples=100000, mom2_dtype='float32', alpha=2.5, upper_bound=50, max_iterations=3, neuron_threshold=1.0)
+Instantiating model
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.22s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.28s/it]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.24s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.18it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.01it/s]
+/media/h3c/users/zongkai/.conda/envs/tkde/lib/python3.10/site-packages/sklearn/feature_extraction/text.py:1368: UserWarning: Upper case characters found in vocabulary while 'lowercase' is True. These entries will not be matched with any documents
+  warnings.warn(
+Loading dataset, attribute snippets, tf-idf data
+Loaded dataset with 10 elements
+Cached context templates [['{}'], ['<|begin_of_text|>The Best of Both Worlds: How AI Can. {}', '<|begin_of_text|>Therefore, it is essential to have a good. {}', '<|begin_of_text|>Because of the importance of the topic and the. {}', '<|begin_of_text|>I love the idea of a secret garden,. {}', '<|begin_of_text|>You are here: Home / Archives for #. {}']]
+Computing right vector (v)
+Lookup index found: 8 | Sentence: The mother tongue of Danielle Darrieux is | Token: ux
+Rewrite layer is 8
+Tying optimization objective to 31
+Recording initial value of v*
+loss 13.2 = 13.2 + 0.0 + 0.0 avg prob of [English] 2.352899628021987e-06
+loss 9.5 = 9.403 + 0.04 + 0.057 avg prob of [English] 0.00011250990792177618
+loss 8.178 = 8.08 + 0.041 + 0.057 avg prob of [English] 0.00039516761898994446
+loss 5.321 = 5.214 + 0.05 + 0.057 avg prob of [English] 0.006282368209213018
+loss 2.439 = 2.286 + 0.095 + 0.057 avg prob of [English] 0.10595136135816574
+loss 0.733 = 0.509 + 0.167 + 0.057 avg prob of [English] 0.6023405194282532
+loss 0.221 = 0.081 + 0.083 + 0.057 avg prob of [English] 0.9229425191879272
+loss 0.156 = 0.025 + 0.074 + 0.057 avg prob of [English] 0.9758557081222534
+loss 0.141 = 0.009 + 0.075 + 0.057 avg prob of [English] 0.9912165403366089
+loss 0.135 = 0.003 + 0.075 + 0.057 avg prob of [English] 0.9966692924499512
+loss 0.134 = 0.002 + 0.075 + 0.057 avg prob of [English] 0.9983517527580261
+loss 0.133 = 0.001 + 0.075 + 0.057 avg prob of [English] 0.9988443851470947
+loss 0.133 = 0.001 + 0.075 + 0.057 avg prob of [English] 0.9993103742599487
+loss 0.133 = 0.001 + 0.075 + 0.057 avg prob of [English] 0.9994934797286987
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.9995934367179871
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.9996587038040161
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.9997057318687439
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.9997415542602539
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.999769926071167
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.9997929334640503
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.999812126159668
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.9998284578323364
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.9998425245285034
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.9998549222946167
+loss 0.132 = 0.0 + 0.075 + 0.057 avg prob of [English] 0.9998658895492554
+Init norm 6.54168701171875 | Delta norm 4.9062652587890625 | Target norm 7.963377475738525
+Cached k/v pair at share/projects/rewriting-knowledge/kvs/meta-llama_Meta-Llama-3-8B-Instruct_NSE/mcf_layer_8_clamp_0.75_case_0.npz
+Computing right vector (v)
+Lookup index found: 9 | Sentence: The official religion of Edwin of Northumbria is | Token: ria
+Rewrite layer is 8
+Tying optimization objective to 31
+Recording initial value of v*
+loss 16.222 = 16.222 + 0.0 + 0.0 avg prob of [Islam] 1.0546946072054197e-07
+loss 11.824 = 11.738 + 0.019 + 0.066 avg prob of [Islam] 8.304731636599172e-06
+loss 9.19 = 9.095 + 0.028 + 0.066 avg prob of [Islam] 0.0001128130970755592
+loss 7.999 = 7.893 + 0.04 + 0.066 avg prob of [Islam] 0.0003778379177674651
+loss 6.735 = 6.636 + 0.033 + 0.066 avg prob of [Islam] 0.0014065394643694162
+loss 5.123 = 5.043 + 0.014 + 0.066 avg prob of [Islam] 0.007105807773768902
+loss 3.467 = 3.322 + 0.079 + 0.066 avg prob of [Islam] 0.037801485508680344
+loss 3.085 = 3.013 + 0.006 + 0.066 avg prob of [Islam] 0.055771440267562866
+loss 1.288 = 1.198 + 0.024 + 0.066 avg prob of [Islam] 0.31701377034187317
+loss 0.496 = 0.387 + 0.042 + 0.066 avg prob of [Islam] 0.6802477836608887
+loss 0.157 = 0.079 + 0.012 + 0.066 avg prob of [Islam] 0.923984944820404
+loss 0.094 = 0.01 + 0.018 + 0.066 avg prob of [Islam] 0.9903403520584106
+loss 0.085 = 0.007 + 0.012 + 0.066 avg prob of [Islam] 0.9929701685905457
+loss 0.086 = 0.008 + 0.012 + 0.066 avg prob of [Islam] 0.9920549392700195
+loss 0.084 = 0.006 + 0.012 + 0.066 avg prob of [Islam] 0.9943525195121765
+loss 0.081 = 0.003 + 0.012 + 0.066 avg prob of [Islam] 0.996734082698822
+loss 0.08 = 0.002 + 0.012 + 0.066 avg prob of [Islam] 0.9979400634765625
+loss 0.08 = 0.001 + 0.012 + 0.066 avg prob of [Islam] 0.998526930809021
+loss 0.079 = 0.001 + 0.011 + 0.066 avg prob of [Islam] 0.9988464117050171
+loss 0.078 = 0.001 + 0.011 + 0.066 avg prob of [Islam] 0.9990410804748535
+loss 0.077 = 0.001 + 0.01 + 0.066 avg prob of [Islam] 0.9991716146469116
+loss 0.075 = 0.001 + 0.008 + 0.066 avg prob of [Islam] 0.9992658495903015
+loss 0.083 = 0.001 + 0.016 + 0.066 avg prob of [Islam] 0.9993394613265991
+loss 0.079 = 0.001 + 0.012 + 0.066 avg prob of [Islam] 0.9993130564689636
+loss 0.079 = 0.001 + 0.012 + 0.066 avg prob of [Islam] 0.999171257019043
+Init norm 5.641054630279541 | Delta norm 4.230791091918945 | Target norm 6.829520225524902
+Cached k/v pair at share/projects/rewriting-knowledge/kvs/meta-llama_Meta-Llama-3-8B-Instruct_NSE/mcf_layer_8_clamp_0.75_case_1.npz
+Computing right vector (v)
+Lookup index found: 4 | Sentence: Toko Yasuda, thep | Token: uda
+Rewrite layer is 8
+Tying optimization objective to 31
+Recording initial value of v*
+loss 9.869 = 9.869 + 0.0 + 0.0 avg prob of [piano] 5.831239832332358e-05
+loss 6.202 = 6.117 + 0.011 + 0.074 avg prob of [piano] 0.0029570467304438353
+loss 6.09 = 5.998 + 0.019 + 0.074 avg prob of [piano] 0.0029247701168060303
+loss 3.265 = 3.166 + 0.025 + 0.074 avg prob of [piano] 0.04689807817339897
+loss 0.514 = 0.389 + 0.051 + 0.074 avg prob of [piano] 0.6808537244796753
+loss 0.312 = 0.171 + 0.068 + 0.074 avg prob of [piano] 0.8626642227172852
+loss 0.848 = 0.681 + 0.093 + 0.074 avg prob of [piano] 0.6870894432067871
+loss 0.155 = 0.006 + 0.075 + 0.074 avg prob of [piano] 0.9936472773551941
+loss 0.146 = 0.031 + 0.041 + 0.074 avg prob of [piano] 0.9694247245788574
+loss 0.2 = 0.093 + 0.034 + 0.074 avg prob of [piano] 0.9128988981246948
+loss 0.132 = 0.023 + 0.035 + 0.074 avg prob of [piano] 0.9776089191436768
+loss 0.114 = 0.014 + 0.026 + 0.074 avg prob of [piano] 0.9858479499816895
+loss 0.106 = 0.009 + 0.023 + 0.074 avg prob of [piano] 0.9909799098968506
+loss 0.1 = 0.006 + 0.02 + 0.074 avg prob of [piano] 0.9937909841537476
+loss 0.096 = 0.004 + 0.018 + 0.074 avg prob of [piano] 0.9955315589904785
+loss 0.093 = 0.003 + 0.016 + 0.074 avg prob of [piano] 0.9967350959777832
+loss 0.092 = 0.002 + 0.015 + 0.074 avg prob of [piano] 0.9975558519363403
+loss 0.09 = 0.002 + 0.014 + 0.074 avg prob of [piano] 0.9980842471122742
+loss 0.088 = 0.002 + 0.013 + 0.074 avg prob of [piano] 0.998404860496521
+loss 0.087 = 0.001 + 0.012 + 0.074 avg prob of [piano] 0.998583197593689
+loss 0.087 = 0.001 + 0.012 + 0.074 avg prob of [piano] 0.9986661672592163
+loss 0.086 = 0.001 + 0.011 + 0.074 avg prob of [piano] 0.9986979961395264
+loss 0.086 = 0.001 + 0.011 + 0.074 avg prob of [piano] 0.9987311363220215
+loss 0.086 = 0.001 + 0.011 + 0.074 avg prob of [piano] 0.9988082647323608
+loss 0.085 = 0.001 + 0.01 + 0.074 avg prob of [piano] 0.9989287853240967
+Init norm 5.087597370147705 | Delta norm 3.8156981468200684 | Target norm 6.303998947143555
+Cached k/v pair at share/projects/rewriting-knowledge/kvs/meta-llama_Meta-Llama-3-8B-Instruct_NSE/mcf_layer_8_clamp_0.75_case_2.npz
+Computing right vector (v)
+Lookup index found: 5 | Sentence: Autonomous University of Madrid, which is located in | Token:  Madrid
+Rewrite layer is 8
+Tying optimization objective to 31
+Recording initial value of v*
+loss 18.935 = 18.935 + 0.0 + 0.0 avg prob of [Sweden] 7.210546382196981e-09
+loss 13.545 = 13.476 + 0.005 + 0.063 avg prob of [Sweden] 1.5855966921662912e-06
+loss 8.721 = 8.631 + 0.026 + 0.063 avg prob of [Sweden] 0.00018424037261866033
+loss 7.117 = 7.028 + 0.026 + 0.063 avg prob of [Sweden] 0.0011025245767086744
+loss 3.274 = 3.176 + 0.034 + 0.063 avg prob of [Sweden] 0.05591955780982971
+loss 0.304 = 0.123 + 0.117 + 0.063 avg prob of [Sweden] 0.8842431902885437
+loss 0.122 = 0.013 + 0.046 + 0.063 avg prob of [Sweden] 0.987315833568573
+loss 0.123 = 0.025 + 0.035 + 0.063 avg prob of [Sweden] 0.9757005572319031
+loss 0.098 = 0.005 + 0.03 + 0.063 avg prob of [Sweden] 0.9951696395874023
+loss 0.102 = 0.003 + 0.035 + 0.063 avg prob of [Sweden] 0.9972257614135742
+loss 0.102 = 0.002 + 0.037 + 0.063 avg prob of [Sweden] 0.9979631304740906
+loss 0.104 = 0.002 + 0.039 + 0.063 avg prob of [Sweden] 0.9983431696891785
+loss 0.102 = 0.001 + 0.037 + 0.063 avg prob of [Sweden] 0.9986960887908936
+loss 0.097 = 0.001 + 0.032 + 0.063 avg prob of [Sweden] 0.9989916086196899
+loss 0.095 = 0.001 + 0.03 + 0.063 avg prob of [Sweden] 0.9992005228996277
+loss 0.096 = 0.001 + 0.032 + 0.063 avg prob of [Sweden] 0.9993576407432556
+loss 0.094 = 0.001 + 0.03 + 0.063 avg prob of [Sweden] 0.9994878768920898
+loss 0.094 = 0.0 + 0.03 + 0.063 avg prob of [Sweden] 0.9995788335800171
+loss 0.095 = 0.0 + 0.031 + 0.063 avg prob of [Sweden] 0.9996447563171387
+loss 0.094 = 0.0 + 0.03 + 0.063 avg prob of [Sweden] 0.9996989965438843
+loss 0.094 = 0.0 + 0.03 + 0.063 avg prob of [Sweden] 0.9997431635856628
+loss 0.094 = 0.0 + 0.03 + 0.063 avg prob of [Sweden] 0.9997768402099609
+loss 0.094 = 0.0 + 0.03 + 0.063 avg prob of [Sweden] 0.9998019933700562
+loss 0.094 = 0.0 + 0.03 + 0.063 avg prob of [Sweden] 0.9998210668563843
+loss 0.094 = 0.0 + 0.03 + 0.063 avg prob of [Sweden] 0.9998360872268677
+Init norm 5.905606746673584 | Delta norm 4.429204940795898 | Target norm 7.068173408508301
+Cached k/v pair at share/projects/rewriting-knowledge/kvs/meta-llama_Meta-Llama-3-8B-Instruct_NSE/mcf_layer_8_clamp_0.75_case_3.npz
+Computing right vector (v)
+Lookup index found: 11 | Sentence: The mother tongue of Thomas Joannes Stieltjes is | Token: jes
+Rewrite layer is 8
+Tying optimization objective to 31
+Recording initial value of v*
+loss 12.48 = 12.48 + 0.0 + 0.0 avg prob of [English] 4.673938747146167e-06
+loss 10.164 = 10.096 + 0.004 + 0.064 avg prob of [English] 4.6438326535280794e-05
+loss 8.01 = 7.941 + 0.005 + 0.064 avg prob of [English] 0.00039569963701069355
+loss 6.506 = 6.429 + 0.014 + 0.064 avg prob of [English] 0.001913345418870449
+loss 1.502 = 1.409 + 0.028 + 0.064 avg prob of [English] 0.2734106183052063
+loss 3.218 = 2.611 + 0.542 + 0.064 avg prob of [English] 0.25496944785118103
+loss 5.438 = 4.949 + 0.425 + 0.064 avg prob of [English] 0.008614443242549896
+loss 0.991 = 0.65 + 0.277 + 0.064 avg prob of [English] 0.5294520854949951
+loss 0.616 = 0.512 + 0.04 + 0.064 avg prob of [English] 0.709281325340271
+loss 0.155 = 0.048 + 0.042 + 0.064 avg prob of [English] 0.9534212946891785
+loss 0.122 = 0.017 + 0.041 + 0.064 avg prob of [English] 0.9830348491668701
+loss 0.109 = 0.006 + 0.039 + 0.064 avg prob of [English] 0.9939290881156921
+loss 0.104 = 0.003 + 0.037 + 0.064 avg prob of [English] 0.9971507787704468
+loss 0.101 = 0.002 + 0.035 + 0.064 avg prob of [English] 0.9982187151908875
+loss 0.096 = 0.001 + 0.031 + 0.064 avg prob of [English] 0.9986526370048523
+loss 0.09 = 0.001 + 0.025 + 0.064 avg prob of [English] 0.9988627433776855
+loss 0.081 = 0.001 + 0.015 + 0.064 avg prob of [English] 0.9989778995513916
+loss 0.073 = 0.001 + 0.008 + 0.064 avg prob of [English] 0.9990450143814087
+loss 0.073 = 0.001 + 0.008 + 0.064 avg prob of [English] 0.9990863800048828
+loss 0.075 = 0.001 + 0.01 + 0.064 avg prob of [English] 0.9991133213043213
+loss 0.073 = 0.001 + 0.008 + 0.064 avg prob of [English] 0.9991306662559509
+loss 0.071 = 0.001 + 0.006 + 0.064 avg prob of [English] 0.9991428852081299
+loss 0.072 = 0.001 + 0.007 + 0.064 avg prob of [English] 0.9991605281829834
+loss 0.072 = 0.001 + 0.007 + 0.064 avg prob of [English] 0.9991916418075562
+loss 0.07 = 0.001 + 0.006 + 0.064 avg prob of [English] 0.9992363452911377
+Init norm 5.853474140167236 | Delta norm 4.390105724334717 | Target norm 7.38598108291626
+Cached k/v pair at share/projects/rewriting-knowledge/kvs/meta-llama_Meta-Llama-3-8B-Instruct_NSE/mcf_layer_8_clamp_0.75_case_5.npz
+Computing right vector (v)
+Lookup index found: 5 | Sentence: Anaal Nathrakh, that was created in | Token: akh
+Rewrite layer is 8
+Tying optimization objective to 31
+Recording initial value of v*
+loss 15.778 = 15.778 + 0.0 + 0.0 avg prob of [Philadelphia] 2.912966579060594e-07
+loss 10.552 = 10.462 + 0.035 + 0.055 avg prob of [Philadelphia] 4.1417646571062505e-05
+loss 8.392 = 8.306 + 0.031 + 0.055 avg prob of [Philadelphia] 0.0003535598225425929
+loss 7.208 = 7.123 + 0.03 + 0.055 avg prob of [Philadelphia] 0.001075285254046321
+loss 3.552 = 3.471 + 0.026 + 0.055 avg prob of [Philadelphia] 0.042336802929639816
+loss 0.519 = 0.218 + 0.246 + 0.055 avg prob of [Philadelphia] 0.8060986399650574
+loss 0.109 = 0.038 + 0.017 + 0.055 avg prob of [Philadelphia] 0.9631397724151611
+loss 0.083 = 0.01 + 0.018 + 0.055 avg prob of [Philadelphia] 0.9902459383010864
+loss 0.078 = 0.007 + 0.016 + 0.055 avg prob of [Philadelphia] 0.9934479594230652
+loss 0.078 = 0.008 + 0.016 + 0.055 avg prob of [Philadelphia] 0.9924453496932983
+loss 0.073 = 0.003 + 0.016 + 0.055 avg prob of [Philadelphia] 0.9973039627075195
+loss 0.072 = 0.002 + 0.015 + 0.055 avg prob of [Philadelphia] 0.9984347224235535
+loss 0.07 = 0.001 + 0.014 + 0.055 avg prob of [Philadelphia] 0.9988845586776733
+loss 0.072 = 0.001 + 0.017 + 0.055 avg prob of [Philadelphia] 0.9991044998168945
+loss 0.072 = 0.001 + 0.016 + 0.055 avg prob of [Philadelphia] 0.9992987513542175
+loss 0.072 = 0.001 + 0.016 + 0.055 avg prob of [Philadelphia] 0.999295175075531
+loss 0.072 = 0.001 + 0.016 + 0.055 avg prob of [Philadelphia] 0.9992460012435913
+loss 0.071 = 0.001 + 0.016 + 0.055 avg prob of [Philadelphia] 0.9992141723632812
+loss 0.071 = 0.001 + 0.015 + 0.055 avg prob of [Philadelphia] 0.9992308616638184
+loss 0.07 = 0.001 + 0.014 + 0.055 avg prob of [Philadelphia] 0.9992565512657166
+loss 0.07 = 0.001 + 0.014 + 0.055 avg prob of [Philadelphia] 0.999294638633728
+loss 0.07 = 0.001 + 0.014 + 0.055 avg prob of [Philadelphia] 0.9993828535079956
+loss 0.069 = 0.001 + 0.014 + 0.055 avg prob of [Philadelphia] 0.9994850158691406
+loss 0.069 = 0.0 + 0.014 + 0.055 avg prob of [Philadelphia] 0.9995352029800415
+loss 0.067 = 0.0 + 0.011 + 0.055 avg prob of [Philadelphia] 0.9995883703231812
+Init norm 6.821691513061523 | Delta norm 5.116268634796143 | Target norm 8.376140594482422
+Cached k/v pair at share/projects/rewriting-knowledge/kvs/meta-llama_Meta-Llama-3-8B-Instruct_NSE/mcf_layer_8_clamp_0.75_case_6.npz
+Computing right vector (v)
+Lookup index found: 3 | Sentence: Apple A5 was created by | Token: 5
+Rewrite layer is 8
+Tying optimization objective to 31
+Recording initial value of v*
+loss 15.398 = 15.398 + 0.0 + 0.0 avg prob of [Google] 3.1342224815489317e-07
+loss 13.633 = 13.535 + 0.036 + 0.063 avg prob of [Google] 1.7139570900326362e-06
+loss 10.406 = 10.258 + 0.086 + 0.063 avg prob of [Google] 6.009047501720488e-05
+loss 4.972 = 4.698 + 0.211 + 0.063 avg prob of [Google] 0.012954436242580414
+loss 1.687 = 1.211 + 0.413 + 0.063 avg prob of [Google] 0.32484692335128784
+loss 0.496 = 0.068 + 0.365 + 0.063 avg prob of [Google] 0.9350371360778809
+loss 1.789 = 1.559 + 0.167 + 0.063 avg prob of [Google] 0.24612122774124146
+loss 0.327 = 0.103 + 0.162 + 0.063 avg prob of [Google] 0.9057720899581909
+loss 0.271 = 0.046 + 0.162 + 0.063 avg prob of [Google] 0.9555177688598633
+loss 0.249 = 0.026 + 0.16 + 0.063 avg prob of [Google] 0.9743017554283142
+loss 0.236 = 0.014 + 0.159 + 0.063 avg prob of [Google] 0.9860538244247437
+loss 0.229 = 0.008 + 0.159 + 0.063 avg prob of [Google] 0.9925253391265869
+loss 0.226 = 0.004 + 0.159 + 0.063 avg prob of [Google] 0.9957137107849121
+loss 0.224 = 0.003 + 0.159 + 0.063 avg prob of [Google] 0.9972637891769409
+loss 0.222 = 0.002 + 0.158 + 0.063 avg prob of [Google] 0.998055100440979
+loss 0.221 = 0.002 + 0.157 + 0.063 avg prob of [Google] 0.9984835982322693
+loss 0.219 = 0.001 + 0.155 + 0.063 avg prob of [Google] 0.9987198114395142
+loss 0.216 = 0.001 + 0.152 + 0.063 avg prob of [Google] 0.9988352656364441
+loss 0.211 = 0.001 + 0.148 + 0.063 avg prob of [Google] 0.9988565444946289
+loss 0.21 = 0.001 + 0.146 + 0.063 avg prob of [Google] 0.9988307952880859
+loss 0.207 = 0.001 + 0.144 + 0.063 avg prob of [Google] 0.998918890953064
+loss 0.206 = 0.001 + 0.142 + 0.063 avg prob of [Google] 0.999047040939331
+loss 0.206 = 0.001 + 0.142 + 0.063 avg prob of [Google] 0.9991016387939453
+loss 0.204 = 0.001 + 0.141 + 0.063 avg prob of [Google] 0.9990791082382202
+Traceback (most recent call last):
+  File "/media/h3c/users/zongkai/.conda/envs/tkde/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/media/h3c/users/zongkai/.conda/envs/tkde/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/media/h3c/users/zongkai/AlphaEdit-main/experiments/evaluate.py", line 547, in <module>
+    main(
+  File "/media/h3c/users/zongkai/AlphaEdit-main/experiments/evaluate.py", line 254, in main
+    glue_results = glue_eval.evaluate(glue_results, out_file, nli_flag = True, sst_flag = True, cola_flag=True, rte_flag=True, mmlu_flag = True, mrpc_flag = True)
+  File "/media/h3c/users/zongkai/AlphaEdit-main/glue_eval/glue_eval.py", line 55, in evaluate
+    result_dict, generations = self.sst_eval.evaluate(gen_len)
+  File "/media/h3c/users/zongkai/AlphaEdit-main/glue_eval/sst_eval.py", line 82, in evaluate
+    input_prompt, sentence, label = self._create_prompt(example, gen_len)
+  File "/media/h3c/users/zongkai/AlphaEdit-main/glue_eval/sst_eval.py", line 33, in _create_prompt
+    remaining_token_length = MODEL_NAME_TO_MAXIMUM_CONTEXT_LENGTH_MAP[self.model.config._name_or_path.lower().split('/')[-1]] - question_token_length - gen_len
+KeyError: 'meta-llama-3-8b-instruct'
+loss 0.202 = 0.001 + 0.138 + 0.063 avg prob of [Google] 0.9989835619926453
+Init norm 5.998622894287109 | Delta norm 4.498967170715332 | Target norm 7.345485210418701
+Cached k/v pair at share/projects/rewriting-knowledge/kvs/meta-llama_Meta-Llama-3-8B-Instruct_NSE/mcf_layer_8_clamp_0.75_case_7.npz
+Computing right vector (v)
+Lookup index found: 6 | Sentence: Shree Pundalik, created in | Token: ik
+Rewrite layer is 8
+Tying optimization objective to 31
+Recording initial value of v*
+loss 17.174 = 17.174 + 0.0 + 0.0 avg prob of [Sweden] 6.16106063944244e-08
+loss 13.949 = 13.802 + 0.086 + 0.062 avg prob of [Sweden] 1.5399918993352912e-06
+loss 10.818 = 10.673 + 0.083 + 0.062 avg prob of [Sweden] 3.414814636926167e-05
+loss 7.877 = 7.651 + 0.164 + 0.062 avg prob of [Sweden] 0.0007467793766409159
+loss 6.252 = 6.114 + 0.076 + 0.062 avg prob of [Sweden] 0.003219227073714137
+loss 2.151 = 1.961 + 0.128 + 0.062 avg prob of [Sweden] 0.21296244859695435
+loss 3.324 = 3.069 + 0.193 + 0.062 avg prob of [Sweden] 0.06403353810310364
+loss 0.728 = 0.347 + 0.318 + 0.062 avg prob of [Sweden] 0.7101006507873535
+loss 2.58 = 2.328 + 0.189 + 0.062 avg prob of [Sweden] 0.1874522864818573
+loss 0.809 = 0.528 + 0.219 + 0.062 avg prob of [Sweden] 0.6836570501327515
+loss 0.311 = 0.042 + 0.207 + 0.062 avg prob of [Sweden] 0.9588562846183777
+loss 0.201 = 0.041 + 0.098 + 0.062 avg prob of [Sweden] 0.9599327445030212
+loss 0.176 = 0.041 + 0.072 + 0.062 avg prob of [Sweden] 0.9595041275024414
+loss 0.157 = 0.031 + 0.064 + 0.062 avg prob of [Sweden] 0.9691405296325684
+loss 0.142 = 0.021 + 0.059 + 0.062 avg prob of [Sweden] 0.9789872169494629
+loss 0.131 = 0.014 + 0.055 + 0.062 avg prob of [Sweden] 0.9857772588729858
+loss 0.124 = 0.01 + 0.052 + 0.062 avg prob of [Sweden] 0.990057110786438
+loss 0.12 = 0.007 + 0.051 + 0.062 avg prob of [Sweden] 0.992680013179779
+loss 0.118 = 0.006 + 0.05 + 0.062 avg prob of [Sweden] 0.9943771362304688
+loss 0.116 = 0.004 + 0.049 + 0.062 avg prob of [Sweden] 0.9955536723136902
+loss 0.114 = 0.004 + 0.048 + 0.062 avg prob of [Sweden] 0.9963692426681519
+loss 0.112 = 0.003 + 0.047 + 0.062 avg prob of [Sweden] 0.9969226121902466
+loss 0.11 = 0.003 + 0.046 + 0.062 avg prob of [Sweden] 0.9973055720329285
+loss 0.109 = 0.002 + 0.045 + 0.062 avg prob of [Sweden] 0.9975800514221191
+loss 0.107 = 0.002 + 0.043 + 0.062 avg prob of [Sweden] 0.9977819323539734
+Init norm 6.059045314788818 | Delta norm 4.544283390045166 | Target norm 7.427356719970703
+Cached k/v pair at share/projects/rewriting-knowledge/kvs/meta-llama_Meta-Llama-3-8B-Instruct_NSE/mcf_layer_8_clamp_0.75_case_9.npz
+Computing right vector (v)
+Lookup index found: 2 | Sentence: BBC One, bySeg | Token:  One
+Rewrite layer is 8
+Tying optimization objective to 31
+Recording initial value of v*
+loss 10.013 = 10.013 + 0.0 + 0.0 avg prob of [Sega] 5.143802991369739e-05
+loss 8.287 = 8.12 + 0.108 + 0.059 avg prob of [Sega] 0.0003952404949814081
+loss 5.899 = 5.7 + 0.14 + 0.059 avg prob of [Sega] 0.0038767470978200436
+loss 5.263 = 5.015 + 0.19 + 0.059 avg prob of [Sega] 0.00874309241771698
+loss 2.876 = 2.714 + 0.104 + 0.059 avg prob of [Sega] 0.0732574611902237
+loss 3.43 = 3.296 + 0.076 + 0.059 avg prob of [Sega] 0.04731462895870209
+loss 0.798 = 0.657 + 0.082 + 0.059 avg prob of [Sega] 0.5722160339355469
+loss 0.32 = 0.161 + 0.101 + 0.059 avg prob of [Sega] 0.8564745187759399
+loss 0.19 = 0.03 + 0.101 + 0.059 avg prob of [Sega] 0.9706567525863647
+loss 0.145 = 0.017 + 0.069 + 0.059 avg prob of [Sega] 0.9831222891807556
+loss 0.114 = 0.014 + 0.041 + 0.059 avg prob of [Sega] 0.9856996536254883
+loss 0.108 = 0.013 + 0.037 + 0.059 avg prob of [Sega] 0.9875302314758301
+loss 0.108 = 0.011 + 0.039 + 0.059 avg prob of [Sega] 0.9893120527267456
+loss 0.107 = 0.009 + 0.039 + 0.059 avg prob of [Sega] 0.9909838438034058
+loss 0.103 = 0.008 + 0.037 + 0.059 avg prob of [Sega] 0.9924430251121521
+loss 0.099 = 0.006 + 0.034 + 0.059 avg prob of [Sega] 0.9936370849609375
+loss 0.096 = 0.005 + 0.032 + 0.059 avg prob of [Sega] 0.99461430311203
+loss 0.092 = 0.005 + 0.029 + 0.059 avg prob of [Sega] 0.995412290096283
+loss 0.089 = 0.004 + 0.027 + 0.059 avg prob of [Sega] 0.9960263967514038
+loss 0.088 = 0.004 + 0.026 + 0.059 avg prob of [Sega] 0.9964843988418579
+loss 0.087 = 0.003 + 0.025 + 0.059 avg prob of [Sega] 0.9968209266662598
+loss 0.086 = 0.003 + 0.025 + 0.059 avg prob of [Sega] 0.9970718622207642
+loss 0.085 = 0.003 + 0.024 + 0.059 avg prob of [Sega] 0.9972742795944214
+loss 0.084 = 0.003 + 0.023 + 0.059 avg prob of [Sega] 0.9974495768547058
+loss 0.084 = 0.002 + 0.023 + 0.059 avg prob of [Sega] 0.9976043701171875
+Init norm 6.409848213195801 | Delta norm 4.80738639831543 | Target norm 7.87105131149292
+Cached k/v pair at share/projects/rewriting-knowledge/kvs/meta-llama_Meta-Llama-3-8B-Instruct_NSE/mcf_layer_8_clamp_0.75_case_10.npz
+Computing right vector (v)
+Lookup index found: 6 | Sentence: Andreas Ivanschitz professionally plays the sport | Token: itz
+Rewrite layer is 8
+Tying optimization objective to 31
+Recording initial value of v*
+loss 11.666 = 11.666 + 0.0 + 0.0 avg prob of [football] 1.0009382094722241e-05
+loss 9.856 = 9.784 + 0.008 + 0.064 avg prob of [football] 6.903227767907083e-05
+loss 7.437 = 7.361 + 0.012 + 0.064 avg prob of [football] 0.0007517457706853747
+loss 5.01 = 4.845 + 0.102 + 0.064 avg prob of [football] 0.008017557673156261
+loss 1.907 = 1.792 + 0.051 + 0.064 avg prob of [football] 0.1707776039838791
+loss 0.527 = 0.361 + 0.102 + 0.064 avg prob of [football] 0.7005007266998291
+loss 0.248 = 0.074 + 0.11 + 0.064 avg prob of [football] 0.935201108455658
+loss 0.158 = 0.008 + 0.086 + 0.064 avg prob of [football] 0.9920625686645508
+loss 0.137 = 0.007 + 0.067 + 0.064 avg prob of [football] 0.9929900169372559
+loss 0.111 = 0.004 + 0.042 + 0.064 avg prob of [football] 0.9955930709838867
+loss 0.085 = 0.003 + 0.019 + 0.064 avg prob of [football] 0.9973003268241882
+loss 0.076 = 0.002 + 0.01 + 0.064 avg prob of [football] 0.9980173110961914
+loss 0.077 = 0.001 + 0.011 + 0.064 avg prob of [football] 0.9985049962997437
+loss 0.075 = 0.001 + 0.01 + 0.064 avg prob of [football] 0.9988614320755005
+loss 0.072 = 0.001 + 0.008 + 0.064 avg prob of [football] 0.9990735054016113
+loss 0.072 = 0.001 + 0.007 + 0.064 avg prob of [football] 0.9992033839225769
+loss 0.071 = 0.001 + 0.007 + 0.064 avg prob of [football] 0.999299943447113
+loss 0.07 = 0.001 + 0.006 + 0.064 avg prob of [football] 0.9993795156478882
+loss 0.07 = 0.001 + 0.005 + 0.064 avg prob of [football] 0.9994468688964844
+loss 0.069 = 0.0 + 0.005 + 0.064 avg prob of [football] 0.9995042681694031
+loss 0.069 = 0.0 + 0.005 + 0.064 avg prob of [football] 0.9995535612106323
+loss 0.069 = 0.0 + 0.005 + 0.064 avg prob of [football] 0.999595582485199
+loss 0.068 = 0.0 + 0.004 + 0.064 avg prob of [football] 0.9996311068534851
+loss 0.068 = 0.0 + 0.004 + 0.064 avg prob of [football] 0.9996600151062012
+loss 0.068 = 0.0 + 0.004 + 0.064 avg prob of [football] 0.9996828436851501
+Init norm 5.886531352996826 | Delta norm 4.414897918701172 | Target norm 7.1579108238220215
+Cached k/v pair at share/projects/rewriting-knowledge/kvs/meta-llama_Meta-Llama-3-8B-Instruct_NSE/mcf_layer_8_clamp_0.75_case_11.npz
+==================================================================1_edit==================================================================
